@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Vehicle Management System</title>
+  <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+</head>
+<body>
+  <div class="container mx-auto p-4">
+    <h1 class="text-2xl font-bold mb-4 bg-blue-500">Vehicle Management System</h1>
+    <div id="vehicleForm" class="mb-4">
+      <h2 class="text-xl mb-2">Add New Vehicle</h2>
+      <form id="addVehicleForm" class="space-y-4">
+        <div>
+          <label for="serviceNo" class="block">Service No</label>
+          <input type="text" id="serviceNo" class="w-full border px-2 py-1">
+        </div>
+        <div>
+          <label for="vehicleNo" class="block">Vehicle No</label>
+          <input type="text" id="vehicleNo" class="w-full border px-2 py-1">
+        </div>
+        <div>
+          <label for="vehicleType" class="block">Vehicle Type</label>
+          <input type="text" id="vehicleType" class="w-full border px-2 py-1">
+        </div>
+        <div>
+          <label for="serviceDate" class="block">Service Date</label>
+          <input type="date" id="serviceDate" class="w-full border px-2 py-1">
+        </div>
+        <div>
+          <label for="estimatedCompletion" class="block">Estimated Completion</label>
+          <input type="date" id="estimatedCompletion" class="w-full border px-2 py-1">
+        </div>
+        <div>
+          <label for="ownerName" class="block">Owner Name</label>
+          <input type="text" id="ownerName" class="w-full border px-2 py-1">
+        </div>
+        <div>
+          <label for="serviceDetails" class="block">Service Details</label>
+          <input type="text" id="serviceDetails" class="w-full border px-2 py-1">
+        </div>
+        <button type="button" id="addVehicleBtn" class="bg-blue-500 text-white px-4 py-2">Add Vehicle</button>
+      </form>
+    </div>
+
+    <div id="vehicleList">
+      <h2 class="text-xl mb-2">Vehicle List</h2>
+      <table class="w-full table-auto">
+        <thead>
+          <tr>
+            <th class="px-4 py-2">Service No</th>
+            <th class="px-4 py-2">Vehicle No</th>
+            <th class="px-4 py-2">Vehicle Type</th>
+            <th class="px-4 py-2">Service Date</th>
+            <th class="px-4 py-2">Estimated Completion</th>
+            <th class="px-4 py-2">Owner Name</th>
+            <th class="px-4 py-2">Service Details</th>
+            <th class="px-4 py-2">Actions</th>
+          </tr>
+        </thead>
+        <tbody id="vehicleTableBody"></tbody>
+      </table>
+    </div>
+  </div>
+  <script src="app.js"></script>
+</body>
+</html>
